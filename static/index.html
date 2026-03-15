@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Flash-Debate Arena | 플래시 디베이트 아레나</title>
+    <link rel="stylesheet" href="static/style.css">
+    <!-- Google Fonts for Korean -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+</head>
+<body>
+    <header>
+        <h1>THE FLASH-DEBATE ARENA</h1>
+        <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem; margin-top: 5px;">Powered by Gemini 2.5 Flash Lite & Search Grounding</p>
+    </header>
+
+    <main class="arena-container">
+        <!-- AI Personas Panel -->
+        <aside class="persona-panel">
+            <div id="p-philosopher" class="persona-card philosopher">
+                <div class="persona-header">
+                    <div class="avatar" style="background: var(--accent-philosopher); color: #000;">論</div>
+                    <div>
+                        <div style="font-weight: bold;">논리 술사</div>
+                        <div style="font-size: 11px; opacity: 0.6;">The Philosopher</div>
+                    </div>
+                </div>
+                <div class="energy-bar-bg"><div class="energy-bar" style="background: var(--accent-philosopher); width: 80%;"></div></div>
+            </div>
+
+            <div id="p-chaos" class="persona-card chaos">
+                <div class="persona-header">
+                    <div class="avatar" style="background: var(--accent-chaos); color: #000;">亂</div>
+                    <div>
+                        <div style="font-weight: bold;">혼돈의 사도</div>
+                        <div style="font-size: 11px; opacity: 0.6;">The Chaos Agent</div>
+                    </div>
+                </div>
+                <div class="energy-bar-bg"><div class="energy-bar" style="background: var(--accent-chaos); width: 40%;"></div></div>
+            </div>
+
+            <div id="p-scientist" class="persona-card scientist">
+                <div class="persona-header">
+                    <div class="avatar" style="background: var(--accent-scientist); color: #000;">數</div>
+                    <div>
+                        <div style="font-weight: bold;">데이터 가디언</div>
+                        <div style="font-size: 11px; opacity: 0.6;">The Scientist</div>
+                    </div>
+                </div>
+                <div class="energy-bar-bg"><div class="energy-bar" style="background: var(--accent-scientist); width: 60%;"></div></div>
+            </div>
+
+            <div id="p-arbiter" class="persona-card arbiter">
+                <div class="persona-header">
+                    <div class="avatar" style="background: var(--accent-arbiter); color: #000;">判</div>
+                    <div>
+                        <div style="font-weight: bold;">중재자</div>
+                        <div style="font-size: 11px; opacity: 0.6;">The Arbiter (Fact Checker)</div>
+                    </div>
+                </div>
+                <div style="font-size: 10px; margin-top: 10px; color: var(--accent-arbiter);">Real-time Search Active</div>
+            </div>
+        </aside>
+
+        <!-- Main Debate Section -->
+        <section class="main-debate">
+            <div id="chat-history">
+                <div class="message bot">
+                    토론 주제를 입력하여 아레나를 시작하세요. 3명의 AI 페르소나가 귀하의 의견과 맞붙으며, 중재자가 실시간으로 팩트체크를 진행합니다.
+                </div>
+            </div>
+
+            <div class="input-area">
+                <input type="text" id="user-input" placeholder="토론 주제 또는 당신의 의견을 입력하세요..." autocomplete="off">
+                <button id="send-btn">전송</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
